@@ -5309,6 +5309,7 @@ int perturbations_initial_conditions(struct precision * ppr,
         /* We apply adiabatic initial conditions. We take \phi'(0) to be the slow-roll value, not the value naively read in by CLASS. (which we take to be 0 in all our runs). */
 
         ppw->pv->y[ppw->pv->index_pt_phi_scf] = (ppw->pvecback[pba->index_bg_dV_scf]*pow(pba->H0,2.)*pow(ktau_three,2.)*(ppr->curvature_ini*s2_squared)*(4.15e-5*pow(pba->h,-2.)))/(210. * pow(k,4.));
+
 		ppw->pv->y[ppw->pv->index_pt_phi_prime_scf] = (pow(a,2.)*ppw->pvecback[pba->index_bg_dV_scf]*ktau_three*(ppr->curvature_ini*s2_squared))/(35.*k) + (pow(ppw->pvecback[pba->index_bg_dV_scf],3.)*pow(pba->H0,4.)*pow(ktau_three,3.)*(ppr->curvature_ini*s2_squared)*pow(4.15e-5*pow(pba->h,-2.),2.))/(10500. * pow(k,7.) * ppw->pvecback[pba->index_bg_V_scf]);
 
       }
